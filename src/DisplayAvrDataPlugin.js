@@ -1,6 +1,6 @@
 import React from 'react';
 import { VERSION } from '@twilio/flex-ui';
-import { FlexPlugin } from 'flex-plugin';
+import { FlexPlugin ,loadCSS } from 'flex-plugin';
 
 import CustomTaskListContainer from './components/CustomTaskList/CustomTaskList.Container';
 import CustomTaskItem from './components/taskListItem/TaskListItem'
@@ -22,10 +22,10 @@ export default class DisplayAvrDataPlugin extends FlexPlugin {
    */
   init(flex, manager) {
     this.registerReducers(manager);
-   
+    flex.DefaultTaskChannels.ChatWhatsApp.templates.TaskListItem.secondLine = ''
+    loadCSS('https://fallow-loris-7862.twil.io/assets/display-avr-data.css')
     flex.Actions.addListener("afterAcceptTask", async function(reservation, testFunc) {
       const task = reservation.task
-      flex.DefaultTaskChannels.ChatWhatsApp.templates.TaskListItem.secondLine = ''
       flex.TaskListItem.Content.add(
       <CustomTaskItem key={CustomTaskItem.name} variables={task.attributes.variables} /> , options);
      

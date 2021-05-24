@@ -1,0 +1,8 @@
+.Twilio-TaskListBaseItem{
+    direction:rtl;
+}
+
+.Twilio-TaskListBaseItem-FirstLine{
+    margin-right:3rem;
+    margin-top: 1rem;
+}

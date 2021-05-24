@@ -9,17 +9,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    
-   
-    "craco-config-flex-plugin": "latest",
-    "flex-plugin": "latest",
-    "flex-plugin-scripts": "latest",
+    "flex-plugin-scripts": "4.9.1-beta.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "latest"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@twilio/flex-ui": "^1",
-    "react-test-renderer": "16.5.2"
+    "react-test-renderer": "^16.13.1"
   }
 }
